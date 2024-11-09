@@ -1,26 +1,47 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
+async function checkCodeSelection() {
+  const editor = vscode.window.activeTextEditor;
+  if (editor) {
+    const selection = editor.selection;
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "vscode-momma" is now active!');
-
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('vscode-momma.VsCodeMama', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from VsCode Momma!');
-	});
-
-	context.subscriptions.push(disposable);
+    if (selection.isEmpty) {
+      console.log("No text selected. Assuming entire file is selected.");
+      const document = editor.document;
+      const fullText = document.getText();
+      console.log("Entire document content:\n", fullText);
+      vscode.window.showInformationMessage(
+        "No text selected. Assuming entire file is selected."
+      );
+    } else {
+      const selectedText = editor.document.getText(selection);
+      console.log(
+        `Text selected from line ${selection.start.line + 1} to line ${
+          selection.end.line + 1
+        }.`
+      );
+      console.log("Selected code:\n", selectedText);
+      vscode.window.showInformationMessage(
+        `Text selected from line ${selection.start.line + 1} to line ${
+          selection.end.line + 1
+        }.`
+      );
+    }
+  }
 }
 
-// This method is called when your extension is deactivated
+export function activate(context: vscode.ExtensionContext) {
+  console.log('Your extension "vscode-momma" is now active!');
+
+  // Register the command to check code selection
+  const disposable = vscode.commands.registerCommand(
+    "vscode-momma.VsCodeMama",
+    () => {
+      checkCodeSelection();
+    }
+  );
+
+  context.subscriptions.push(disposable);
+}
+
 export function deactivate() {}
