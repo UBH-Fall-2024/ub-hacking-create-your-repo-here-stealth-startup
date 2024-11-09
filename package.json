@@ -1,7 +1,7 @@
 {
   "name": "vscode-momma",
   "displayName": "VsCode Momma",
-  "description": "",
+  "description": "A VS Code extension to interface with different LLMs like OpenAI, Claude.ai, and Llama.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.95.0"
@@ -9,22 +9,52 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:vscode-momma.VsCodeMama",
+    "onCommand:vscode-momma.resetConfig"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "vscode-momma.VsCodeMama",
         "title": "VsCode Mama"
+      },
+      {
+        "command": "vscode-momma.resetConfig",
+        "title": "VsCode Mama: Reset Configuration"
       }
     ],
     "keybindings": [
-        {
-            "command": "vscode-momma.VsCodeMama",
-            "key": "ctrl+opt+s",
-            "mac": "ctrl+cmd+s"
+      {
+        "command": "vscode-momma.VsCodeMama",
+        "key": "ctrl+opt+s",
+        "mac": "ctrl+cmd+s"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "VsCode Momma Configuration",
+      "properties": {
+        "vscode-momma.apiTokens.openai": {
+          "type": "string",
+          "default": "",
+          "description": "Your OpenAI API key",
+          "scope": "application"
+        },
+        "vscode-momma.apiTokens.claudeAi": {
+          "type": "string",
+          "default": "",
+          "description": "Your Claude.ai API key",
+          "scope": "application"
+        },
+        "vscode-momma.apiTokens.ollamaSelected": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use Llama locally (no API key required)"
         }
-    ]
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
