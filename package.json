@@ -17,6 +17,13 @@
         "command": "vscode-momma.VsCodeMama",
         "title": "VsCode Mama"
       }
+    ],
+    "keybindings": [
+        {
+            "command": "vscode-momma.VsCodeMama",
+            "key": "ctrl+opt+s",
+            "mac": "ctrl+cmd+s"
+        }
     ]
   },
   "scripts": {
