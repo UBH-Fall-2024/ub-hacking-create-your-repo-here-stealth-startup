@@ -1,6 +1,6 @@
-# vscode-mamma README
+# vscode-momma README
 
-This is the README for your extension "vscode-mamma". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "vscode-momma". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

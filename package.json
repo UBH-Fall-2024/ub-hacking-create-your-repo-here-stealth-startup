@@ -1,7 +1,7 @@
 {
-  "name": "vscode-mamma",
-  "displayName": "VsCode Mamma",
-  "description": "Help lazy devs create better code by helping refactor garage code, just like ya momma would.",
+  "name": "vscode-momma",
+  "displayName": "VsCode Momma",
+  "description": "",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.95.0"
@@ -14,7 +14,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-mamma.helloWorld",
+        "command": "vscode-momma.helloWorld",
         "title": "Hello World"
       }
     ]
