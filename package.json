@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-momma.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-momma.VsCodeMama",
+        "title": "VsCode Mama"
       }
     ]
   },
