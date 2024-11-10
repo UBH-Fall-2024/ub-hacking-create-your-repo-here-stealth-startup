@@ -56,7 +56,6 @@
         }
       }
     }
-
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -79,10 +78,8 @@
     "vscode-test": "^1.6.1"
   },
   "dependencies": {
-    "openai": "^4.71.1",
-    "typescript": "^5.6.3"
-  },
-  "dependencies": {
-    "axios": "^1.7.7"
+    "axios": "^1.7.7",
+    "claude-ai": "^1.2.2",
+    "openai": "^4.71.1"
   }
 }
