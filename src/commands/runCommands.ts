@@ -2,9 +2,9 @@ import * as vscode from "vscode";
 import { promptForConfiguration } from "../utils/configHelpers";
 import { callOpenAI } from "../utils/openaiHelpers";
 import { callClaudeAI } from "../utils/claudeHelpers";
+import OllamaService from "../utils/ollamaHelpers";
 import { CLEAN_CODE_PROMPT } from "../utils/constants";
 import { checkCodeSelection, replaceSelectedText } from "../utils/checkCodeSelection";
-import OllamaService from "../ollamaService";
 
 export async function runVsCodeMama() {
   const config = vscode.workspace.getConfiguration("vscode-momma");
