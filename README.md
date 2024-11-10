@@ -1,71 +1,55 @@
-# vscode-momma README
+# VsCode Mama: AI-Powered Code Optimization Extension
 
-This is the README for your extension "vscode-momma". After writing up a brief description, we recommend including the following sections.
+**VsCode Mama** is an AI-driven VS Code extension designed to enhance, refactor, and optimize your code effortlessly. Supporting various Large Language Models (LLMs) like OpenAI, Claude.ai, and Ollama's Llama 3.2, this tool enables production-level code improvements and documentation with just a few clicks or shortcuts.
 
-## Features
+## ✨ Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Supports Multiple LLMs:** Choose between OpenAI, Claude.ai, and Ollama (Llama 3.2).
+- **Code Refactoring and Optimization:** Refactor entire files or highlighted sections for targeted improvements.
+- **Customizable API Key Integration:** Easily add your own API keys for OpenAI and Claude.ai.
+- **Quick Model Switching:** Reset configuration and seamlessly switch between LLMs as needed.
 
-For example if there is an image subfolder under your extension project workspace:
+## 🚀 Getting Started
 
-\!\[feature X\]\(images/feature-x.png\)
+### Installation
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. **Download and Install Ollama (Llama 3.2)**  
+   For Llama, download from [Ollama's site](https://ollama.com/download) and follow the instructions to install Llama 3.2 locally.
 
-## Requirements
+2. **Install VsCode Mama Extension**  
+   - Visit [mammagonnacleanyocode.co](https://mammagonnacleanyocode.co) to learn more about the extension and download it.
+   - Alternatively, open VS Code, go to the Extensions panel, and search for "VsCode Mama" to install it directly.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Initial Setup
 
-## Extension Settings
+1. **Activate the Extension**  
+   Run the shortcut `Command + Control + S` or search "VsCode Mama" in the command palette.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+2. **Select Your Preferred Model**  
+   Upon first use, a popup will appear with three model options:
+   - **OpenAI**: Requires an API key. Obtain it from [OpenAI's API Key Page](https://platform.openai.com/api-keys).
+   - **Claude.ai**: Requires an API key. Obtain it from [Claude's API Key Page](https://console.anthropic.com/settings/keys).
+   - **Ollama (Llama 3.2)**: Works locally; ensure you’ve downloaded and installed it from [here](https://ollama.com/download).
 
-For example:
+3. **Enter API Keys**  
+   After selecting OpenAI or Claude.ai, you will be prompted to enter your API key.
 
-This extension contributes the following settings:
+## 🛠 Usage
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+1. **Refactor Code**  
+   - Run the shortcut `Command + Control + S` on the current file, or select a specific code section and run the shortcut to refactor only that part.
+   - The LLM will optimize, clean up, and add comments to your code as needed.
 
-## Known Issues
+2. **Switch Models**  
+   - To reset and choose a different LLM, run `VsCode Mama: Reset Configuration` from the command palette. You will be guided through selecting a new model and re-entering API keys if necessary.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## 📚 Documentation
 
-## Release Notes
+- **Supported LLMs**  
+  - **OpenAI**: Integrate by obtaining an API key from OpenAI's platform.
+  - **Claude.ai**: Integrate with Claude.ai’s key for flexible AI-based optimizations.
+  - **Ollama (Llama 3.2)**: Run locally; no API key required, but Llama 3.2 must be installed on your device.
 
-Users appreciate release notes as you update your extension.
+## 📝 License
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This project is licensed under the MIT License - see the LICENSE file for details.
